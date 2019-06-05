@@ -119,9 +119,9 @@ def analysisOneDict(dic, result, className):
     result += '\n' + classinit
 
     result += '  factory  ' + className + ' .fromJson(Map<String, dynamic> json) =>\n'
-    result += '    _$ ' + className + ' FromJson(json);\n'
+    result += '    _$' + className + ' FromJson(json);\n'
     result += '\n'
-    result += '  Map<String, dynamic> toJson() => _$ ' + className + ' ToJson(this);'
+    result += '  Map<String, dynamic> toJson() => _$' + className + ' ToJson(this);'
 
     return [result, otherlist]
 
