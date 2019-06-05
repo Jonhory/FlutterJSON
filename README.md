@@ -115,3 +115,6 @@ flutter packages pub run build_runner watch
 flutter packages pub run build_runner build --delete-conflicting-outputs
 
 ```
+
+
+* 当前为测试版本，常见的`json`格式可以正常解析，如果报异常错误，请把`json`和报错信息提交`Issues`
