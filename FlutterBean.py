@@ -8,14 +8,19 @@ import os
 writeDictList = []
 
 
-def readFile(path, name = 'Bean0'):
+def readFile(path, name='Bean0'):
     with open(path, 'r', encoding='utf-8') as f:
         content = f.read()
         f.close()
         js = json.dumps(content)
         resource = json.loads(js)
+        data = '';
+        try:
+            data = json.loads(resource)
 
-        data = json.loads(resource)
+        except Exception as err:
+            print('请检查文件内容是否为json , path=%s\nerr=%s' % (path, err))
+            return
 
         # 通用头部
         result = """import 'package:json_annotation/json_annotation.dart';\n"""
@@ -152,7 +157,8 @@ if __name__ == "__main__":
 
     test = False
     if test:
-        readFile('/Users/user/Desktop/json.md', 'TestBean')
+        path = '/Users/user/Desktop/json.md'
+        readFile(path)
     else:
         if len(sys.argv) == 1:
             print('请输入json文件路径')

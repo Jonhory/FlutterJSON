@@ -1,0 +1,57 @@
+import 'package:json_annotation/json_annotation.dart';
+part 'Bean0.g.dart';
+
+@JsonSerializable()
+class Bean0 {
+  String name;
+  String url;
+  int page;
+  bool isNonProfit;
+  AddressBean address;
+  List<LinksBean> links;
+
+  Bean0(
+    this.name,
+    this.url,
+    this.page,
+    this.isNonProfit,
+    this.address,
+    this.links,
+  );
+  factory  Bean0 .fromJson(Map<String, dynamic> json) =>
+    _$Bean0 FromJson(json);
+
+  Map<String, dynamic> toJson() => _$Bean0 ToJson(this);
+}
+
+@JsonSerializable()
+class AddressBean {
+  String street;
+  String city;
+  String country;
+
+  AddressBean(
+    this.street,
+    this.city,
+    this.country,
+  );
+  factory  AddressBean .fromJson(Map<String, dynamic> json) =>
+    _$AddressBean FromJson(json);
+
+  Map<String, dynamic> toJson() => _$AddressBean ToJson(this);
+}
+
+@JsonSerializable()
+class LinksBean {
+  String name;
+  String url;
+
+  LinksBean(
+    this.name,
+    this.url,
+  );
+  factory  LinksBean .fromJson(Map<String, dynamic> json) =>
+    _$LinksBean FromJson(json);
+
+  Map<String, dynamic> toJson() => _$LinksBean ToJson(this);
+}
