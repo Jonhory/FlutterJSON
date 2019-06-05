@@ -1,5 +1,9 @@
 # Flutter 中处理json数据
 
+* 配合第三方 `json_annotation` 处理
+
+  To use [package:json_serializable](https://pub.dev/packages/json_serializable) in your package, add these dependencies to your `pubspec.yaml`.
+
 * 使用方法 ` python3 ${py脚本路径} ${json文件路径} ${初始类名} `
 
 * 源文件
