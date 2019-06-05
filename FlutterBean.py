@@ -32,7 +32,7 @@ def readFile(path, name = 'Bean0'):
                 print('数组为空')
 
         print(result)
-        saveFile(result, path, 'dart')
+        saveFile(result, path, 'dart.txt')
 
 
 def analysisDict(dic, result, className):
@@ -150,7 +150,7 @@ def saveFile(content, path, suffix):
 if __name__ == "__main__":
     print('使用方法 python3 ${py脚本路径} ${json文件路径} ${初始类名}')
 
-    test = True
+    test = False
     if test:
         readFile('/Users/user/Desktop/json.md', 'TestBean')
     else:
